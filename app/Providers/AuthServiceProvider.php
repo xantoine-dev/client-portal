@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
+use App\Models\ChangeRequest;
+use App\Models\TimeLog;
+use App\Policies\ChangeRequestPolicy;
+use App\Policies\TimeLogPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -13,7 +16,8 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        //
+        TimeLog::class => TimeLogPolicy::class,
+        ChangeRequest::class => ChangeRequestPolicy::class,
     ];
 
     /**

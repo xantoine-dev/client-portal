@@ -1,0 +1,14 @@
+@use "sass:math";
+@import "bootstrap/scss/bootstrap";
+
+body {
+    background-color: #f7f8fb;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.card {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
